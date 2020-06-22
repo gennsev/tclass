@@ -1,6 +1,4 @@
-# Course URL:
-# https://deeplearningcourses.com/c/natural-language-processing-with-deep-learning-in-python
-# https://udemy.com/natural-language-processing-with-deep-learning-in-python
+
 from __future__ import print_function, division
 from builtins import range
 # Note: you may need to update your version of future
@@ -18,7 +16,6 @@ from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
 
 
 def main():
-    # Train and test data from https://www.cs.umb.edu/~smimarog/textmining/datasets/
     train = pd.read_csv('train/r8-train-all-terms.txt', header=None, sep='\t')
     test = pd.read_csv('test/r8-test-all-terms.txt', header=None, sep='\t')
     train.columns = ['label', 'content']
