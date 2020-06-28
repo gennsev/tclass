@@ -8,7 +8,7 @@ class Word2VecVectorizer:
   def __init__(self):
     print("Loading in word vectors...")
     self.word_vectors = KeyedVectors.load_word2vec_format(
-      '../large_files/GoogleNews-vectors-negative300.bin',
+      'word2vec/GoogleNews-vectors-negative300.bin',
       binary=True
     )
     print("Finished loading in word vectors")

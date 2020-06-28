@@ -1,6 +1,7 @@
 import sys
 import numpy as np
 import pandas as pd
+import os
 
 class GloveVectorizer:
   def __init__(self):
@@ -9,7 +10,7 @@ class GloveVectorizer:
     word2vec = {}
     embedding = []
     idx2word = []
-    with open('glove/glove.6B.50d.txt') as f:
+    with open('glove/glove.6B.50d.txt', encoding='utf-8', errors='ignore') as f:
       # is just a space-separated text file in the format:
       # word vec[0] vec[1] vec[2] ...
       for line in f:

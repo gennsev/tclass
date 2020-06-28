@@ -9,8 +9,9 @@ import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import word2vecVectorizer
-import glovevectorizer
+from glove.glovevectorizer import GloveVectorizer
+from word2vec.word2vecVectorizer import Word2VecVectorizer
+
 
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
 
@@ -21,7 +22,7 @@ def main():
     train.columns = ['label', 'content']
     test.columns = ['label', 'content']
 
-    vectorizer = glovevectorizer.GloveVectorizer()
+    vectorizer = GloveVectorizer()
     #vectorizer = word2vecVectorizer.Word2VecVectorizer()
     Xtrain = vectorizer.fit_transform(train.content)
     Ytrain = train.label
