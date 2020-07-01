@@ -1,5 +1,6 @@
 *.DS_store
 *.pyc
+*.json
 glove.6B.50d.txt
 .ipynb_checkpoints
 __pycache__
