@@ -3,7 +3,7 @@ import os
 import pandas as pd
 
 
-class fasttextClassifier:
+class FasttextClassifier:
     def __init__(self, load_model=None, train_data=None, epoch=40, lr=1): 
         if load_model is not None:
             self.model = fasttext.load_model(str(load_model))
@@ -13,7 +13,7 @@ class fasttextClassifier:
             else:
                 self.model = fasttext.train_supervised(input=train_data, epoch=epoch, lr=lr)
 
-    def fasttext_labeler(self, text):
+    def label(self, text):
         pred_label = self.model.predict(text)
         return pred_label
     
