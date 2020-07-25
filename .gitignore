@@ -5,3 +5,7 @@ glove.6B.50d.txt
 .ipynb_checkpoints
 __pycache__
 __MACOSX
+Notebooks/data_final/
+Notebooks/generated_files/
+Notebooks/merged/
+Notebooks/*.txt
